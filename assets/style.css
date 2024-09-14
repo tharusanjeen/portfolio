@@ -5,14 +5,15 @@
     scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for Webkit browsers */
-body::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
+/* Hide scrollbar, but allow scroll */
+body {
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    overflow: hidden; /* Hide scrollbar for other browsers */
 }
 
-/* Optionally, you can style the scrollbar thumb and track */
-body::-webkit-scrollbar-thumb {
-    background: transparent; /* Hide thumb */
+html {
+    overflow: hidden; /* Hide scrollbar for the entire page */
 }
 
 header {
