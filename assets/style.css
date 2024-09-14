@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    background-image: url("./hero_img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#s-down {
+    animation-name: scrollBtn;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* bounce effect */
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollBtn {
+    0% {
+        transform: translateY(0); /* starting point */
+    }
+    50% {
+        transform: translateY(30px); /* move down */
+    }
+    100% {
+        transform: translateY(0); /* back to start */
+    }
+}
+
+.icon {
+    display: inline-block;
+    transition: all linear .5s;
+}
+
+.icon:hover {
+    transform: rotate(360deg);
+    transition: transform linear .5s;
+}
+
+#react {
+    animation-name: react;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes react {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+#resume {
+    position: relative;
+    background-image: url("./resule-cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#resume:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(4px);
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#resume * {
+    position: relative;
+    z-index: 2;
+}
+
+#contact a:hover, #resume a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#rocket {
+    animation-name: rocket;
+    animation-duration: .4s;
+    animation-delay: inherit;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rocket {
+    from {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+#sidebar {
+    transition: max-height linear .3s;
+}
+
+.hidden-loader {
+    display: none;
+}
