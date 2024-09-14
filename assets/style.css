@@ -5,6 +5,16 @@
     scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Optionally, you can style the scrollbar thumb and track */
+body::-webkit-scrollbar-thumb {
+    background: transparent; /* Hide thumb */
+}
+
 header {
     position: relative;
     background-image: url("./hero_img.jpg");
