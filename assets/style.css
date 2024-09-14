@@ -5,17 +5,6 @@
     scroll-behavior: smooth;
 }
 
-/* Hide scrollbar, but allow scroll */
-body {
-    overflow: -moz-scrollbars-none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-    overflow: hidden; /* Hide scrollbar for other browsers */
-}
-
-html {
-    overflow: hidden; /* Hide scrollbar for the entire page */
-}
-
 header {
     position: relative;
     background-image: url("./hero_img.jpg");
