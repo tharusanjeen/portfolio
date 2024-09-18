@@ -56,7 +56,7 @@ header::before {
 
 #react {
     animation-name: react;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
