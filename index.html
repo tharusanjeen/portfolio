@@ -4,201 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sanjeen Tharu's portfolio showcasing skills in web development, cybersecurity, and more. Explore my projects and contact me for opportunities.">
-    <meta name="keywords" content="web developer, portfolio, web design, web development, frontend developer, backend developer, full stack developer, cybersecurity, Sanjeen Tharu, sanjeen, sanjin, tharu sanjeen, sanjeen tharu web developer, tharusanjeen, tharusanjin, sanjin tharu, Sanjeen portfolio, SJ, SJ Tharu, Sanjeen Tharu cyber enthusiast, cyber security developer, Sanjeen Tharu web design, developer portfolio, tech portfolio, Tharu web developer, tech enthusiast, Tharu coder, software developer, Sanjeen coder, programmer, Sanjeen dev, Sanjeen full stack">
-    <meta name="author" content="Sanjeen Tharu">
-    <link rel="canonical" href="https://www.sanjeentharu.com.np">
+    <title>Seized site!</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        .loader {
+            width: 80px;
+            height: 20px;
+            position: relative;
+        }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sanjeen Tharu | Web Developer & Cyber Enthusiast">
-    <meta property="og:description" content="Explore the portfolio of Sanjeen Tharu, a web developer and cybersecurity enthusiast. Discover projects and skills.">
-    <meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg">
-    <meta property="og:url" content="https://www.sanjeentharu.com.np">
+        .loader:before,
+        .loader:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #000;
+            box-shadow: 0 0 0 50px;
+            clip-path: polygon(-50px -20px, 10% -12px, 20% 0, calc(50% - 15px) 0, calc(50% - 10px) -20px, calc(50% - 8px) -15px, calc(50% + 8px) -15px, calc(50% + 10px) -20px, calc(50% + 15px) 0, 80% 0, 90% -12px, calc(100% + 50px) -20px, 100% 80%, calc(100% + 10px) calc(100% + 10px), 60% 100%, 50% calc(100% + 15px), 40% 100%, -10px calc(100% + 10px), 0 80%);
+        }
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sanjeen Tharu | Web Developer & Cyber Enthusiast">
-    <meta name="twitter:description" content="Explore the portfolio of Sanjeen Tharu, showcasing web development and cybersecurity projects.">
-    <meta name="twitter:image" content="https://www.sanjeentharu.com.np/images/twitter-image.jpg">
+        .loader:after {
+            animation: l9 1s infinite;
+            transform: perspective(300px) translateZ(0px)
+        }
 
-    <title>Sanjeen Tharu | Web Devloper</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/style.css">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    
-    <!-- Remix Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
-        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Custom JavaScript -->
-    <script src="./assets/index.js" defer></script>
+        @keyframes l9 {
+            to {
+                transform: perspective(300px) translateZ(100px);
+                opacity: 0
+            }
+        }
+    </style>
 </head>
 
-
 <body>
-    <header id="home" class="relative tracking-widest">
-        <nav class="relative max-w-[100rem] m-auto flex items-center justify-between p-4 bg-gray-600 lg:bg-transparent">
-            <a href="#" class="flex items-center z-10">
-                <img src="./assets/logo.png" alt="logo" class="w-14 h-10">
-                <h1 class="text-white uppercase">sanjeen tharu</h1>
-            </a>
-            <ul id="sidebar" class="absolute left-0 top-full max-h-0 overflow-hidden w-full bg-gray-800 z-10 text-white lg:static lg:max-h-none lg:w-auto lg:flex lg:bg-transparent">
-                <li><a class="block text-center py-4 uppercase border-b-[1px] border-gray-500 hover:bg-gray-600 duration-400 lg:border-none lg:inline-block lg:px-2 lg:hover:text-gray-400 lg:hover:bg-transparent" href="#about">about</a></li>
-                <li><a class="block text-center py-4 uppercase border-b-[1px] border-gray-500 hover:bg-gray-600 duration-400 lg:border-none lg:inline-block lg:px-2 lg:hover:text-gray-400 lg:hover:bg-transparent" href="#passion">passion</a>
-                </li>
-                <li><a class="block text-center py-4 uppercase border-b-[1px] border-gray-500 hover:bg-gray-600 duration-400 lg:border-none lg:inline-block lg:px-2 lg:hover:text-gray-400 lg:hover:bg-transparent" href="#experience"
-                    >experience</a></li>
-                <li><a class="block text-center py-4 uppercase border-b-[1px] border-gray-500 hover:bg-gray-600 duration-400 lg:border-none lg:inline-block lg:px-2 lg:hover:text-gray-400 lg:hover:bg-transparent" href="#work">work</a></li>
-                <li><a class="block text-center py-4 uppercase border-b-[1px] border-gray-500 hover:bg-gray-600 duration-400 lg:border-none lg:inline-block lg:px-2 lg:hover:text-gray-400 lg:hover:bg-transparent" href="#contact">contact</a>
-                </li>
-            </ul>
-            <button id="toggleNav" class="collapsed text-white text-2xl z-10 lg:hidden"><i class="ri-menu-3-line"></i></button>
-        </nav>
-        <div class="max-w-[100rem] m-auto">
-            <div class="mt-80 grid place-content-center gap-5">
-                <h1 class="text-center text-white uppercase text-7xl font-light z-10">hi, i'm sanjeen</h1>
-                <h3 class="text-center text-white capitalize z-10">web developer & cyber enthusiast</h3>
-                <a id="s-down" href="#about" class="text-white text-center text-5xl mt-40 mb-20 group z-10"><i
-                        class="ri-arrow-down-s-line group:hover:text-gray-300"></i></a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div id="about" class="max-w-[100rem] m-auto flex flex-col items-center gap-7 tracking-widest py-20">
-            <h1 class="px-2 uppercase text-center text-3xl font-light mb-5">a little bit about me</h1>
-            <img src="./assets/profile.gif" alt="" class="w-48 h-48 object-cover rounded-full">
-            <p class="max-w-[60rem] text-center leading-loose px-7 lg:px-2">Hey! My name is Sanjeen Tharu, and I'm a web developer
-                with a strong
-                interest in both development and cybersecurity. I'm currently a third sem student at <a
-                    href="https://tu.edu.np/" target="_blank"
-                    class="capitalize text-blue-800 font-lightbold hover:underline">tribhuvan university</a> pursuing a
-                <a href="https://fohss.tu.edu.np/pages/bca-programm-1597" target="_blank"
-                    class="capitalize text-blue-800 font-lightbold hover:underline">bachelor degree in computer
-                    application (BCA).</a> I'm passionate about learning new technologies and building innovative and
-                secure web applications. <span class="hidden lg:inline-block">I aspire to create engaging and seamless user experiences through my work,
-                combining creativity and technical expertise.</span>
-            </p>
-            <p class="text-center">When I'm not on the computer, I enjoy reading, walking, and meditating.</p>
-            <div class="w-full lg:w-[60rem] bg-[#F0F0F0] px-10 py-7 rounded-md">
-                <h1 class="text-center mb-10 text-xl">Self Proclamations:</h1>
-                <div class="flex flex-col items-center justify-around gap-10 sm:flex-row">
-                    <div class="flex flex-col items-center gap-5 w-1/4">
-                        <i class="ri-keyboard-box-line text-5xl text-[#555555]"></i>
-                        <p class="capitalize text-center text-nowrap">web developer</p>
-                    </div>
-                    <div class="flex flex-col items-center gap-5 w-1/4">
-                        <i class="ri-secure-payment-line text-5xl text-[#555555]"></i>
-                        <p class="capitalize text-center text-nowrap">cyber enthusiast</p>
-                    </div>
-                    <div class="flex flex-col items-center gap-5 w-1/4">
-                        <i class="ri-book-open-line text-5xl text-[#555555]"></i>
-                        <p class="capitalize">reader</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="passion" class="bg-[#F0F0F0] py-20 tracking-widest">
-            <h1 class="uppercase text-3xl font-light text-center mb-10">what i do</h1>
-            <div class="flex flex-col gap-10 lg:max-w-[100rem] lg:m-auto lg:flex-row lg:justify-between">
-                <div class="flex flex-col items-center gap-8 lg:w-[30%]">
-                    <div class="text-6xl bg-[#29009B] p-16 rounded-full text-white">
-                        <i class="ri-computer-line icon"></i>
-                    </div>
-                    <h1 class="uppercase font-semibold text-gray-800">design</h1>
-                    <span class="text-center text-gray-700 px-5 lg:px-0">
-                        I aim to craft user interfaces and experiences that are intuitive, engaging, and
-                        accessible across digital platforms. Whether it's creating a sleek website or developing a
-                        seamless user journey, my goal is to enhance usability through thoughtful design.
-                    </span>
-                </div>
-                <div class="flex flex-col items-center gap-8 lg:w-[30%]">
-                    <div class="text-6xl bg-[#29009B] p-16 rounded-full text-white">
-                        <i class="ri-code-s-slash-line icon"></i>
-                    </div>
-                    <h1 class="uppercase font-semibold text-gray-800">development</h1>
-                    <span class="text-center text-gray-700 px-5 lg:px-0">
-                        I'm always eager to expand my skills in creating efficient and secure applications. As I continue to grow as a developer, I strive to
-                        write clean, maintainable code that others can easily understand and build upon, ensuring my
-                        work contributes to the creation of secure and innovative software.
-                    </span>
-                </div>
-                <div class="flex flex-col items-center gap-8 lg:w-[30%]">
-                    <div class="text-6xl bg-[#29009B] p-16 rounded-full text-white">
-                        <i class="ri-lightbulb-line icon"></i>
-                    </div>
-                    <h1 class="uppercase font-semibold text-gray-800">involvement</h1>
-                    <span class="text-center text-gray-700 px-5 lg:px-0">
-                        I actively seek opportunities to apply my knowledge and collaborate with others. I'm constantly engaged in learning and experimenting with new
-                        technologies while keeping an eye on trends in web and mobile development.
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div id="experience" class="py-20 flex flex-col items-center gap-10 tracking-widest">
-            <h1 class="uppercase text-3xl font-lighter">experience</h1>
-            <p class="text-center max-w-[40rem] px-2 leading-loose">I've been doing web development for about a year now, and I'm
-                always eager to learn more in this fast paced industry.</p>
-            <div>
-                <h1 class="uppercase text-center mb-8">some technologies i've worked with:</h1>
-                <div class="flex flex-col items-center gap-10">
-                    <div class="flex flex-wrap justify-center gap-20">
-                            <img class="w-16 h-16" src="./assets/tech-logos/html.gif" alt="">
-                            <img class="w-16 h-16" src="./assets/tech-logos/css.gif" alt="">
-                            <img class="w-16 h-16" src="./assets/tech-logos/javascript.gif" alt="">
-                            <img class="w-20 h-20" src="./assets/tech-logos/tailwind.gif" alt="">
-                            <img class="w-16 h-16" id="react" src="./assets/tech-logos/react.png" alt="">
-                    </div>
-                    <div class="flex flex-wrap justify-center gap-20">
-                            <img class="w-16 h-16" src="./assets/tech-logos/node.gif" alt="">
-                            <img class="w-20 h-20" src="./assets/tech-logos/mongodb.gif" alt="">
-                            <img class="w-16 h-16" src="./assets/tech-logos/php.gif" alt="">
-                            <img class="w-20 h-20" src="./assets/tech-logos/mysql.gif" alt="">
-                                                  <img class="w-16 h-16" src="./assets/tech-logos/linux.gif" alt="">
-                    </div>
-                    <div class="flex flex-wrap justify-center gap-20">
-                            <img class="w-14 h-14" src="./assets/tech-logos/github.gif" alt="">
-                            <img class="w-14 h-14" src="./assets/tech-logos/code.gif" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="resume" class="flex flex-col items-center justify-center py-10 gap-5">
-            <h1 class="text-white uppercase tracking-widest text-3xl">Check out my résumé!</h1>
-            <a href="https://drive.google.com/file/d/1CqSfNWPqUX6zLhbkRxmvacAYQ3CzRZ1U/view?usp=sharing" target="_blank" class="text-white capitalize tracking-widest bg-transparent border-2 border-white px-4 py-2 hover:px-6 duration-300">grab a copy</a>
-        </div>
-        <div id="contact" class="py-14 flex flex-col items-center gap-8 tracking-widest bg-[#F0F0F0]">
-                <i class="fa-solid fa-paper-plane text-4xl"></i>
-                <h1 class="uppercase text-3xl font-light">get in touch!</h1>
-                <h3 class="w-[20rem] md:w-[25rem] text-center">Whether you have an idea for a project or just want to chat, feel free to shoot me an email!</h3>
-                <a href="mailto:sanjeentharu04@gmail.com" class="capitalize tracking-widest bg-transparent border-2 border-black text-lg px-4 py-2 hover:px-6 duration-300 hover:text-white hover:border-transparent">say hello</a>
-        </div>
-    </main>
-    <footer class="py-8 bg-[#222222] text-[#B5B5B5] flex flex-col items-center gap-6">
-        <div>
-            <a href="https://www.facebook.com/sanjeen.004" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#2A00FF]"><i class="ri-facebook-fill"></i></a>
-            <a href="https://x.com/Sanju0461" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#009DE2]"><i class="ri-twitter-fill"></i></a>
-            <a href="https://www.facebook.com/sanjeen.004" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#2A00FF]"><i class="ri-instagram-fill"></i></a>
-            <a href="https://codepen.io/Sanjeen-Tharu" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#ffffff] hover:text-black"><i class="ri-codepen-line"></i></a>
-            <a href="https://github.com/tharusanjeen" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#000000]"><i class="ri-github-fill"></i></a>
-            <a href="https://www.linkedin.com/in/sanjeen-tharu/" target="_blank" class="text-3xl bg-[#333333] px-2 duration-300 hover:bg-[#009DE2]"><i class="ri-linkedin-fill"></i></a>
-        </div>
-        <a id="rocket" href="#home"><i class="fa-solid fa-shuttle-space text-3xl rotate-[270deg]"></i></a>
-        <span class="text-sm">&copy; Sanjeen Tharu 2024</span>
-    </footer>
-    <div id="loader-div" class="fixed top-0 left-0 h-screen w-screen z-50 bg-white grid place-content-center">
-        <div class="loader"></div>
-    </div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+    <div class="loader"></div>
+    <h1 style="font-size: 2vw;">This site is seized by batman</h1>
+</div>
 </body>
 
 </html>
