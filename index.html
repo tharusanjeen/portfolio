@@ -2,51 +2,362 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seized site!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sanjeen Tharu | Portfolio</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            width: 100vw;
-            height: 100vh;
-            display: grid;
-            place-content: center;
-        }
-        .loader {
-            width: 80px;
-            height: 20px;
-            position: relative;
-        }
-
-        .loader:before,
-        .loader:after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: #000;
-            box-shadow: 0 0 0 50px;
-            clip-path: polygon(-50px -20px, 10% -12px, 20% 0, calc(50% - 15px) 0, calc(50% - 10px) -20px, calc(50% - 8px) -15px, calc(50% + 8px) -15px, calc(50% + 10px) -20px, calc(50% + 15px) 0, 80% 0, 90% -12px, calc(100% + 50px) -20px, 100% 80%, calc(100% + 10px) calc(100% + 10px), 60% 100%, 50% calc(100% + 15px), 40% 100%, -10px calc(100% + 10px), 0 80%);
-        }
-
-        .loader:after {
-            animation: l9 1s infinite;
-            transform: perspective(300px) translateZ(0px)
-        }
-
-        @keyframes l9 {
-            to {
-                transform: perspective(300px) translateZ(100px);
-                opacity: 0
-            }
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
 
-<body>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-    <div class="loader"></div>
-    <h1 style="font-size: 2vw;">This site is seized by batman</h1>
-</div>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-gray-100">
+        <nav class="left-0 relative max-w-[90rem] m-auto flex items-center justify-between px-4 py-6">
+            <h1
+                class="text-2xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 animate-pulse">
+                <a href="#">Sanjeen Tharu</a>
+            </h1>
+
+
+            <ul id="links" class="absolute left-0 top-full w-full max-h-0 overflow-hidden bg-gray-100 flex flex-col gap-3 text-center border-t-[1px] duration-300
+            sm:static sm:max-h-none sm:w-auto sm:flex-row sm:overflow-visible sm:border-none">
+                <li><a href="#about"
+                        class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">about</a>
+                </li>
+                <li><a href="#about"
+                        class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover py-2:duration-300">skills</a>
+                </li>
+                <li><a href="#about"
+                        class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">projects</a>
+                </li>
+                <li><a href="#about"
+                        class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">timeline</a>
+                </li>
+                <li><a href="#about"
+                        class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">contact</a>
+                </li>
+            </ul>
+
+            <button id="menu-btn" class="sm:hidden duration-300 hover:duration-300 hover:text-blue-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section
+        class="bg-gradient-to-r h-[60vh] from-blue-600 grid place-content-center to-purple-700 text-white py-20 px-4 duration-300 sm:h-[40vh]">
+        <div class="max-w-6xl mx-auto text-center">
+            <img src="https://c4.wallpaperflare.com/wallpaper/934/699/684/fight-club-tyler-durden-wallpaper-preview.jpg"
+                alt="Tyler Durden"
+                class="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-white shadow-lg object-cover max-w-full" />
+            <h2 class="text-3xl sm:text-4xl font-bold">
+                I’m <span id="typed-text" class="text-yellow-300"></span><span class="animate-pulse">|</span>
+            </h2>
+            <p class="mt-4 text-base sm:text-lg max-w-xl mx-auto">
+                Full Stack Developer | Java • Spring Boot • React • PostgreSQL • Linux
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-16 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Quick Stats</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <h4 class="text-4xl font-bold text-blue-600">15+</h4>
+                    <p class="mt-2">Projects Completed</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <h4 class="text-4xl font-bold text-purple-600">1+</h4>
+                    <p class="mt-2">Years Coding</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <h4 class="text-4xl font-bold text-green-600">50K+</h4>
+                    <p class="mt-2">Lines of Code</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded shadow">
+                    <h4 class="text-4xl font-bold text-red-600">∞</h4>
+                    <p class="mt-2">Bug Fixes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-white px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-center">About Me</h3>
+            <p class="text-base sm:text-lg leading-relaxed text-gray-700 text-center">
+                I’m a highly motivated developer based in Nepal with a passion for building efficient, secure, and
+                scalable
+                systems. I focus heavily on backend development using Java + Spring Boot, and I also craft responsive
+                frontend
+                experiences with HTML, CSS, and React. Currently learning bug bounty, strengthening Linux skills, and
+                working
+                out daily.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Skills</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-sm">
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12" src="https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg"
+                        alt="java_icon" />
+                    Java
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNou7-DlVcN5nOVq73_RDi6OAYZAzOknfzQw&s"
+                        alt="spring_boot_icon" />
+                    Spring Boot
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="" />
+                    HTML & CSS
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+                        alt="" />
+                    JavaScript
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGmKtrnxElpqw3AExKXPWWBulcwjlvDJa1Q&s"
+                        alt="" />
+                    React
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png"
+                        alt="" />
+                    PostgreSql
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUsbIoQi5UNRg405cikeSnK3LBTIn3zNsjKA&s"
+                        alt="" />
+                    Linux
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white rounded-lg shadow p-4">
+                    <img class="w-12"
+                        src="https://images.seeklogo.com/logo-png/27/2/github-logo-png_seeklogo-273183.png" alt="" />
+                    Github
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-16 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 rounded-xl shadow p-5">
+                    <img src="https://via.placeholder.com/300x180" alt="Skool Clone" class="rounded mb-4 max-w-full" />
+                    <h4 class="text-xl font-semibold mb-2">Skool Clone</h4>
+                    <p class="text-sm text-gray-600 mb-2">React, Spring Boot, MySQL</p>
+                    <p class="text-gray-700 mb-4">
+                        Community app with groups, posts, and user authentication.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 rounded-xl shadow p-5">
+                    <img src="https://via.placeholder.com/300x180" alt="Fitness Tracker"
+                        class="rounded mb-4 max-w-full" />
+                    <h4 class="text-xl font-semibold mb-2">Fitness Tracker</h4>
+                    <p class="text-sm text-gray-600 mb-2">JS, HTML, LocalStorage</p>
+                    <p class="text-gray-700 mb-4">
+                        Track your daily pushups, streaks, and workout routines.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 rounded-xl shadow p-5">
+                    <img src="https://via.placeholder.com/300x180" alt="JWT Auth" class="rounded mb-4 max-w-full" />
+                    <h4 class="text-xl font-semibold mb-2">JWT Auth System</h4>
+                    <p class="text-sm text-gray-600 mb-2">Spring Boot + JWT</p>
+                    <p class="text-gray-700 mb-4">
+                        Professional access-refresh token auth system with RBAC.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="py-16 bg-gray-50 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Timeline</h3>
+            <div class="border-l-4 border-blue-500 pl-6 space-y-6">
+                <div>
+                    <h4 class="text-xl font-semibold">BCA – Bachelor of Computer Applications</h4>
+                    <p class="text-sm text-gray-600">2023 – Present</p>
+                    <p class="text-gray-700">Focused on Java, PHP, and C#. Learned web dev and security.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold">Started Learning Spring Boot</h4>
+                    <p class="text-sm text-gray-600">2024</p>
+                    <p class="text-gray-700">
+                        Built REST APIs, JWT auth, and CRUD apps with JPA, DTOs, and validations.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold">Linux & Bug Bounty Journey</h4>
+                    <p class="text-sm text-gray-600">2025</p>
+                    <p class="text-gray-700">Using Linux, learning Burp Suite and web exploitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Certifications & Achievements</h3>
+            <ul class="space-y-4 text-lg text-gray-700 max-w-xl mx-auto">
+                <li>✅ Java Programming - HackerRank (2024)</li>
+                <li>✅ Spring Boot REST API Mastery (Udemy, 2025)</li>
+                <li>✅ Bachelor in Computer Application (In Progress)</li>
+                <li>✅ PortSwigger Web Security Academy: Practitioner Level (In Progress)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-6">Contact Me</h3>
+            <p class="text-gray-600 mb-6">Got an idea or opportunity? Let’s collaborate.</p>
+            <form action="https://formspree.io/f/xqkrkjka" method="POST" class="space-y-4 text-left">
+                <input type="text" name="name" placeholder="Your Name" required
+                    class="w-full border border-gray-300 rounded px-4 py-2" />
+                <input type="email" name="email" placeholder="Your Email" required
+                    class="w-full border border-gray-300 rounded px-4 py-2" />
+                <textarea name="message" rows="4" placeholder="Your Message" required
+                    class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+                <button type="submit"
+                    class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full sm:w-auto">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://github.com/tharusanjeen" target="_blank" aria-label="GitHub"><svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 2C6.48 2 2 6.48 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.528 2.341 1.087 2.91.832.092-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.338 1.91-1.294 2.75-1.025 2.75-1.025.546 1.376.202 2.393.1 2.646.64.7 1.029 1.592 1.029 2.683 0 3.842-2.337 4.687-4.566 4.936.36.31.68.92.68 1.855 0 1.338-.012 2.418-.012 2.747 0 .268.18.58.688.481A10.013 10.013 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg></a>
+            <a href="https://linkedin.com/in/tharusanjeen" target="_blank" aria-label="LinkedIn"><svg
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                </svg></a>
+            <a href="mailto:sanjeentharu04@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 12H8m0 0l4-4m-4 4l4 4m0-4h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6a2 2 0 012-2h8z" />
+                </svg></a>
+        </div>
+        <p class="text-sm">© 2025 Sanjeen Tharu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Typing effect
+        const titles = [
+            "Sanjeen 😎",
+            "Learning 📚",
+            "Tyler 🔥",
+            "Grinding 💪",
+            "Lonewolf 🐺",
+            "Exploring 🌍"
+        ];
+
+        let i = 0,
+            j = 0,
+            current = "",
+            isDeleting = false;
+
+        function typeEffect() {
+            const typedText = document.getElementById("typed-text");
+
+            if (!isDeleting && j <= titles[i].length) {
+                current = titles[i].substring(0, j++);
+            } else if (isDeleting && j >= 0) {
+                current = titles[i].substring(0, j--);
+            }
+
+            typedText.innerHTML = current;
+
+            if (!isDeleting && j === titles[i].length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % titles.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 150);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
+    <script>
+        const menuBtn = document.querySelector("#menu-btn");
+        const links = document.querySelector("#links");
+
+        menuBtn.addEventListener("click", () => {
+            if (links.classList.contains("max-h-0")) {
+                console.log("show navbar");
+                links.classList.remove("max-h-0");
+                links.classList.add("max-h-[20rem]")
+                links.classList.add("py-2")
+            }
+            else {
+                links.classList.remove("max-h-[20rem]")
+                links.classList.remove("py-2")
+                links.classList.add("max-h-0")
+            }
+        })
+    </script>
+
 </body>
 
 </html>
