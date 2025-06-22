@@ -33,21 +33,21 @@
             </h1>
 
 
-            <ul id="links" class="absolute left-0 top-full w-full max-h-0 overflow-hidden bg-gray-100 flex flex-col gap-3 text-center border-t-[1px] duration-300
+            <ul id="linksDiv" class="absolute left-0 top-full w-full max-h-0 overflow-hidden bg-gray-100 flex flex-col gap-3 text-center border-t-[1px] duration-300
             sm:static sm:max-h-none sm:w-auto sm:flex-row sm:overflow-visible sm:border-none">
                 <li><a href="#about"
                         class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">about</a>
                 </li>
-                <li><a href="#about"
+                <li><a href="#skills"
                         class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover py-2:duration-300">skills</a>
                 </li>
-                <li><a href="#about"
+                <li><a href="#projects"
                         class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">projects</a>
                 </li>
-                <li><a href="#about"
+                <li><a href="#timeline"
                         class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">timeline</a>
                 </li>
-                <li><a href="#about"
+                <li><a href="#contact"
                         class="capitalize block py-2 border-b-[1px] sm:border-none duration-300 hover:text-blue-500 hover:duration-300">contact</a>
                 </li>
             </ul>
@@ -341,20 +341,30 @@
 
     <script>
         const menuBtn = document.querySelector("#menu-btn");
-        const links = document.querySelector("#links");
+        const linksDiv = document.querySelector("#linksDiv");
 
         menuBtn.addEventListener("click", () => {
-            if (links.classList.contains("max-h-0")) {
+            if (linksDiv.classList.contains("max-h-0")) {
                 console.log("show navbar");
-                links.classList.remove("max-h-0");
-                links.classList.add("max-h-[20rem]")
-                links.classList.add("py-2")
+                linksDiv.classList.remove("max-h-0");
+                linksDiv.classList.add("max-h-[20rem]")
+                linksDiv.classList.add("py-2")
             }
             else {
-                links.classList.remove("max-h-[20rem]")
-                links.classList.remove("py-2")
-                links.classList.add("max-h-0")
+                linksDiv.classList.remove("max-h-[20rem]")
+                linksDiv.classList.remove("py-2")
+                linksDiv.classList.add("max-h-0")
             }
+        })
+
+        const links = document.querySelectorAll("#linksDiv a")
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                 linksDiv.classList.remove("max-h-[20rem]")
+                linksDiv.classList.remove("py-2")
+                linksDiv.classList.add("max-h-0")
+            })
         })
     </script>
 
